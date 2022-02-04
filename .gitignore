@@ -1,0 +1,5 @@
+/build
+/include
+/vcpkg_installed
+.DS_Store
+.idea

@@ -1,0 +1,10 @@
+{
+  "name": "hangeul-id",
+  "version": "0.1.1",
+  "dependencies": [
+    "catch2",
+    "boost-uuid",
+    "boost-algorithm",
+    "boost-multiprecision"
+  ]
+}
