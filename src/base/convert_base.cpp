@@ -39,6 +39,21 @@ uint1024_t convert_base::convert_to_10(std::vector<int> value, int from) {
   return res;
 }
 
+uint1024_t convert_base::convert_from_16_to_10(const std::string &value) {
+  return uint1024_t("0x" + value);
+}
+
+std::string convert_base::convert_from_10_to_16(const uint1024_t &value) {
+  std::vector<std::string> hex{
+          "0", "1", "2", "3", "4", "5", "6", "7",
+          "8", "9", "A", "B", "C", "D", "E", "F",
+  };
+  std::string res;
+  std::vector<int> i16 = convert_from_10(value, 16);
+  for (const auto &item: i16) { res += hex[item]; }
+  return res;
+}
+
 std::vector<int>
 convert_base::convert(std::vector<int> value, int from, int to) {
   return convert_from_10(convert_to_10(std::move(value), from), to);

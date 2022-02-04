@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(hangeul-id VERSION 0.1.1 DESCRIPTION "Unique id using hangeul" LANGUAGES CXX)
+project(hangeul-id VERSION 0.1.2 DESCRIPTION "Unique id using hangeul" LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 file(GLOB_RECURSE HEADER_FILES "src/*.h")

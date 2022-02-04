@@ -29,6 +29,18 @@ TEST_CASE("Convert Base", "[convert_base]") {
                     std::vector<int>{11, 13, 37, 15, 70}, 78) == 413561140);
   }
 
+  SECTION("from hexadecimal to decimal") {
+    REQUIRE(convert_base::convert_from_16_to_10("AC00") == 44032);
+    REQUIRE(convert_base::convert_from_16_to_10("D7A3") == 55203);
+    REQUIRE(convert_base::convert_from_16_to_10("FFFFFF") == 16777215);
+  }
+
+  SECTION("from decimal to hexadecimal") {
+    REQUIRE(convert_base::convert_from_10_to_16(44032) == "AC00");
+    REQUIRE(convert_base::convert_from_10_to_16(55203) == "D7A3");
+    REQUIRE(convert_base::convert_from_10_to_16(16777215) == "FFFFFF");
+  }
+
   SECTION("from any to any") {
     REQUIRE(convert_base::convert(std::vector<int>{2, 5}, 8, 2) ==
             std::vector<int>{1, 0, 1, 0, 1});

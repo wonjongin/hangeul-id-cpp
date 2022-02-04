@@ -9,6 +9,8 @@ namespace convert_base {
   std::vector<int> convert_from_10(const uint1024_t &value, int to);
   uint1024_t convert_to_10(std::vector<int> value, int from);
   std::vector<int> convert(std::vector<int> value, int from, int to);
+  uint1024_t convert_from_16_to_10(const std::string &value);
+  std::string convert_from_10_to_16(const uint1024_t &value);
   uint1024_t powu(const uint1024_t &base, const uint1024_t &exp);
 }// namespace convert_base
 

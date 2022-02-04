@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace boost::multiprecision;
-enum HangeulCharGroup { KSX1001 };
+enum HangeulCharGroup { KSX1001, ALL_HANGEUL };
 
 class HangeulId {
   private:

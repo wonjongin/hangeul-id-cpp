@@ -1,4 +1,5 @@
 #include "HangeulId.h"
+#include "hangeul/all_hangeul.h"
 #include "hangeul/ksx1001.h"
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/uuid/uuid.hpp>
@@ -13,6 +14,8 @@ HangeulId::HangeulId(HangeulCharGroup char_group) : char_group(char_group) {}
 std::string HangeulId::integer_to_hangel_id(const uint1024_t &integer) {
   if (this->char_group == HangeulCharGroup::KSX1001) {
     return ksx1001::ksx1001_letters(integer);
+  } else if (this->char_group == HangeulCharGroup::ALL_HANGEUL) {
+    return all_hangeul::all_hangeul_letters(integer);
   } else {
     return "ERROR";
   }
