@@ -18,7 +18,6 @@ format:
 
 .PHONY: cmake
 cmake:
-	@make format
 	@cmake \
 		-G Ninja \
 		-B build \
@@ -26,7 +25,6 @@ cmake:
 
 .PHONY: build
 build:
-	@make format
 	@cmake \
         -G Ninja \
         -B build \
@@ -35,7 +33,6 @@ build:
 
 .PHONY: build-make
 build-make:
-	@make format
 	@cmake \
         -G "Unix Makefiles" \
         -B build \
